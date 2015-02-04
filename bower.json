@@ -1,0 +1,25 @@
+{
+  "name": "pie-chart-slab",
+  "version": "0.0.0",
+  "homepage": "https://github.com/slabs-io/pie-chart-slab",
+  "authors": [
+    "Marcell Jusztin <hello@morcmarc.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "~3.3.1",
+    "slabs.io.js": "*",
+    "underscore": "*"
+  },
+  "resolutions": {
+    "bootstrap": "~3.3.1"
+  }
+}

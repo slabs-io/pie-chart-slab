@@ -1,0 +1,21 @@
+{
+  "name" : "Pie Chart",
+  "description" : "A simple pie chart",
+  "type" : "output",
+  "connectionsIn" : 1,
+  "connectionsOut" : 0,
+  "schema" : {
+    "type": "object",
+    "properties" : {
+      "title": {
+        "type": "string",
+        "default": "Pie Chart",
+        "title": "Chart Title"
+      }
+    }
+  },
+  "source": {
+    "label": "Core Slab",
+    "url": "http://slabs.io/"
+  }
+}

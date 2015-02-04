@@ -1,0 +1,19 @@
+{
+  "name": "pie-chart-slab",
+  "version": "1.0.0",
+  "description": ">A simple pie chart output slab",
+  "main": "index.js",
+  "scripts": {
+
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/slabs-io/pie-chart-slab"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/slabs-io/pie-chart-slab/issues"
+  },
+  "homepage": "https://github.com/slabs-io/pie-chart-slab"
+}
