@@ -29,36 +29,47 @@ var testData = {
 slabs.getData().then(function (obj) {
 
 
-    var data = obj || testData;
+    var networkData = obj || testData;
 
-    var series = [];
+    var chartConfig = [{
+        type: 'pie',
+        data: []
+    }];
 
-    _.forEach(data.values, function(val){
-
-        var seriesItem = { data: [] };
-        if(data.labels[val]){
-            seriesItem.name = data.labels[val];
-        }else{
-            seriesItem.name = val;
-        }
-
-        _.forEach(data.data, function(item){
-            seriesItem.data.push(item[val]);
+    _.forEach(networkData.data, function(item, i) {
+        var label = Object.keys(item)[0];
+        var value = item[label];
+        chartConfig[0].data.push({
+            name     : networkData.categories[i],
+            y        : value,
+            sliced   : false,
+            selected : false
         });
-
-        series.push(seriesItem);
+        console.log(chartConfig);
     });
-
 
     $('#container').highcharts({
         title: {
             text: 'Pie Chart',
-            x: -20 //center
+            x: -20
         },
-        xAxis: {
-            categories: data.categories
+        tooltip: {
+            pointFormat: '{series.name}: <b>{point.y} ({point.percentage:.1f}%)</b>'
         },
-        series: series
+        plotOptions: {
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: true,
+                    format: '<b>{point.name}</b>: {point.y} ({point.percentage:.1f}%)',
+                    style: {
+                        color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                    }
+                }
+            }
+        },
+        series: chartConfig
     });
 
 
