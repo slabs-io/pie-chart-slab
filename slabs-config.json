@@ -11,7 +11,8 @@
       "title": {
         "type": "string",
         "default": "Pie Chart",
-        "title": "Chart Title"
+        "title": "Chart Title",
+        "brief": "Title"
       }
     }
   },
